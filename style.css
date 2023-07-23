@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    display: grid;
+    width: 90vw;
+    height: 90vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:"addTask taskList taskList"
+                        "sideBar  taskList taskList"
+                        "sideBar  taskList taskList";
+    gap:1vw;
+    
+}
+
+.addTask{
+grid-area: addTask;
+border:2px solid blue;
+
+}
+.sideBar{
+    grid-area: sideBar;
+    border: 2px solid yellow;
+    display: flex;
+    flex-direction: column;
+}
+.taskList{
+    grid-area: taskList;
+    border: 2px solid red;
+    width: 60vw;
+}
+ /* Add Taks styles */
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    width: 100%;
+    color: #fff;
+    border: none;
+    border-radius: 1vw;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* side bar styles */
+.sideBar .menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid green;
+    width: 100%;
+    height:100%;
+    gap: 1vh;
+    justify-content: space-evenly;
+}
+.menu li button{
+    width:15vw;
+    height: 5vh;
+    border: 1px solid rgb(94, 92, 92);
+    border-radius: 1vw;
+    color: black;
+    font-size: 18px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;}
+.menu li button:hover{
+    background-color: rgb(94, 92, 92);
+    border-color: #000;
+    color: white;
+
+}
+
+
+/* Task list styles */
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.task-table thead{
+    width: 100%;
+    color: white;
+    background-color: #007bff;
+}
+.task-table th,
+.task-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Faded border line */
+}
+
+
+.actions{
+    display: flex;
+    gap: 1vw;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Custom styles for Update and Delete buttons */
+.btn-update {
+    color: white;
+    width: 8vw;
+    height: 5vh;
+    background-color: #28a745;
+    border-radius: 2vw;
+    cursor: pointer;
+}
+
+.btn-delete {
+    color: white;
+    width: 8vw;
+    height: 5vh;
+    background-color: #dc3545;
+    border-radius: 2vw;
+    cursor: pointer;
+}
+.completed{
+    color: white;
+    width: 8vw;
+    height: 5vh;
+    background-color: #3f3e3c;
+    border-radius: 2vw;
+    cursor: pointer;
+    
+}
+.complete{
+    color: white;
+    width: 8vw;
+    height: 5vh;
+    background-color: #0d3d18;
+    border-radius: 2vw;
+    cursor: pointer;
+}
+
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+    .task-table th,
+    .task-table td {
+        font-size: 14px;
+    }
+
+    .task-table th {
+        padding: 8px;
+    }
+}
+/* task list styles */
