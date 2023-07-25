@@ -75,10 +75,10 @@ class CompletedTask extends UncompletedTask{
         const deadline = new Date(task.deadline);
         const today = new Date();
         // get the difference between the deadline and the current date and retun the difference in hours
-        const difference = Math.abs(deadline - today) / 3600000;
+        const difference = Math.abs(deadline - today) / 36e5;
         // if the difference is less than 24 hours, return the difference in hours
         if(difference < 24) {
-            return `${difference} hours`;
+            return `${Math.floor(difference)} hours`;
         }
         // if the difference is greater than 24 hours, return the difference in days
         
@@ -124,6 +124,12 @@ addTask.addEventListener('click', (e) => {
 
     if(title.value === '' || description.value === '' || deadline.value === '') {
         alert('Please fill all fields')
+        return;
+    }
+    // if you select a date in the past it should alert you
+    if(new Date(deadline.value) < new Date()){
+
+        alert('The task is overdue, please select a date in the future')
         return;
     }else{
         if(addTask.textContent == 'Add Task'){
@@ -220,7 +226,7 @@ const displayTasks = (tasks,status) =>{
             <td>${task.description}</td>
             <td>${task.deadline}</td>
             <div class="actions">
-            <td><button class="btn-update ${task.isCompleted} ">Update</button></td>
+            <td><button class="btn-update ${task.isCompleted}" ${task.isCompleted&&"disabled"}  >Update</button></td>
             <td><button class="btn-delete ${task.isCompleted}">Delete</button></td>
             </div>
             </tr>

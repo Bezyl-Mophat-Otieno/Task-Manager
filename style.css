@@ -158,7 +158,7 @@ textarea.form-control {
     border-bottom: 1px solid rgb(255, 255, 255,0.4) ; /* Faded border line */
 }
 .noTasks{
-    color: red;
+    color:#e2de1d;
 }
 
 
@@ -256,7 +256,7 @@ textarea.form-control {
 
 
 /* Responsive styles */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 412px) {
     .task-table th,
     .task-table td {
         font-size: 14px;
@@ -265,5 +265,76 @@ textarea.form-control {
     .task-table th {
         padding: 8px;
     }
+    .main{
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:"addTask"
+                            "taskList"
+                            "sideBar";
+        gap:2vw;
+        padding: 0 2vw;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .menu li button{
+        width: 90vw;
+        height: 5vh;
+    }
+    .taskList{
+        margin: 0 2vw;
+        padding: 0 2vw;
+        width: 100vw;
+        height: 20vh;
+        overflow-x: scroll;
+        overflow-y: scroll;
+    }
+    .btn-delete{
+        width: 20vw;
+        height: 5vh;
+    }
+    .btn-update{
+        width: 20vw;
+        height: 5vh;
+    }
+    .complete{
+        width: 20vw;
+        height: 5vh;
+    }
+    .completed{
+        width: 20vw;
+        height: 5vh;
+    }
+    .complete:hover{
+        width: 20vw;
+        height: 5vh;
+
+    }
+    .completed:hover{
+        width: 20vw;
+        height: 5vh;
+
+    }
+    .btn-update:hover{
+        width: 20vw;
+        height: 5vh;
+    }
+    .btn-delete:hover{
+        width: 20vw;
+        height: 5vh;
+    }
+    .addTask{
+        width:99vw;
+        margin: 2vw;
+    }
+
+
+ 
+
 }
 /* task list styles */
