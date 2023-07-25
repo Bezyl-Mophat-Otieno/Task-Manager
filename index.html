@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Task Manager</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Outfit:wght@400;700&family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="main">
         <!-- Add task section -->
         <div class="addTask">
+            <h1>Task Manager</h1>
             <div class="container">
                 <form>
                     <div class="form-group">
@@ -28,14 +32,13 @@
         <!-- side menu bar section -->
         <div class="sideBar">
                 <ul class="menu">
-                    <li><button class="active" id="tasksStatus">Tasks Status</button></li>
-                    <li><button>Incomplete Tasks</button></li>
-                    <li><button>Completed Tasks</button></li>
+                    <li><button class="active" id="tasksStatus">Tasks</button></li>
+                    <li><button id="incompleteTasksBtn">Incomplete Tasks</button></li>
+                    <li><button id="completedTasksBtn">Completed Tasks</button></li>
                 </ul>
             </div>
         <div class="taskList">
-
-            <table class="task-table">
+         <table class="task-table">
                 <thead>
                     <tr>
                         <th>Title</th>
@@ -52,7 +55,6 @@
 
         </div>
             
-
         </div>
     </div>
     <script src="./script.js"></script>
