@@ -19,7 +19,7 @@ font-family: 'Montserrat', sans-serif;
     height: 90vh;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-template-areas:"addTask taskList taskList"
+    grid-template-areas:"addProject taskList taskList"
                         "sideBar  taskList taskList"
                         "sideBar  taskList taskList";
     gap:1vw;
@@ -29,8 +29,8 @@ font-family: 'Montserrat', sans-serif;
     margin-left: 4vw;
 }
 
-.addTask{
-grid-area: addTask;
+.addProject{
+grid-area: addProject;
 color: white;
 /* border:2px solid blue; */
 
@@ -66,7 +66,7 @@ color: white;
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid rgba(59, 59, 59, 0.2);
+    border: 1px solid rgb(128, 128, 128,0.4);
     border-radius: 5px;
     background-color: transparent;
     color: #fafafa;
@@ -328,7 +328,7 @@ textarea.form-control {
         width: 20vw;
         height: 5vh;
     }
-    .addTask{
+    .addProject{
         width:99vw;
         margin: 2vw;
     }

@@ -30,7 +30,9 @@ class UncompletedTask{
     }
     //Delete a task from the list
     static deleteTask(task) {
-        UncompletedTask.tasks = UncompletedTask.tasks.filter((t) => t.title !== task.title);
+        const index = UncompletedTask.tasks.indexOf(task)
+        // remove the task from the array of  completed tasks
+        UncompletedTask.tasks.splice(index, 1);
     }
     //Update a task
     static update(task) {
@@ -91,7 +93,10 @@ class CompletedTask extends UncompletedTask{
     }
     //Override the deleteTask method
     static deleteTask(task) {
-        CompletedTask.tasks = CompletedTask.tasks.filter((t) => t.title !== task.title);
+         const index =  CompletedTask.tasks.indexOf(task)
+         // remove the task from the array of  completed tasks
+            CompletedTask.tasks.splice(index, 1);
+        
     }
     //Override the updateTask method
     static update(task) {
